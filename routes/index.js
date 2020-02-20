@@ -195,4 +195,33 @@ router.get('/search_shops', function (req, res) {
   })
 })
 
+/*
+获取商家信息
+ */
+router.get('/shop/goods', function (req, res) {
+  setTimeout(function () {
+    const data = require('../data/shops_detail.json')
+    res.send({code: 0, data: data.goods})
+  }, 300)
+})
+
+/*
+获取商家的商品详情
+ */
+router.get('/shop/ratings', function (req, res) {
+  setTimeout(function () {
+    const data = require('../data/shops_detail.json')
+    res.send({code: 0, data: data.ratings})
+  }, 300)
+})
+
+/*
+获取商家的评价
+ */
+router.get('/shop/info', function (req, res) {
+  setTimeout(function () {
+    const data = require('../data/shops_detail.json')
+    res.send({code: 0, data: data.info})
+  }, 300)
+})
 module.exports = router;
